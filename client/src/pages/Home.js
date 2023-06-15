@@ -1,16 +1,23 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
+import { AutoComplete } from "primereact/autocomplete";
+
+import "primereact/resources/primereact.min.css";
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+
+import ModelList from '../components/ModelList.jsx'
+import DropdownMenu from '../components/Dropdown.jsx';
+
 
 function Home() {
+
     return (
-        <motion.div>
-            <Link to="/titanic">
-                <motion.button className="p-1 m-1 bg-slate-300 border-2 border-black">
-                    Titanic Survival Prediction
-                </motion.button>
-            </Link>
-        </motion.div>
+        <>
+            <div className="flex justify-center items-center h-screen">
+                <DropdownMenu />
+            </div>
+        </>
     )
 }
 
